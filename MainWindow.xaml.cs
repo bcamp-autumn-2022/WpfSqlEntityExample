@@ -24,5 +24,11 @@ namespace WpfSqlEntityExample
         {
             InitializeComponent();
         }
+
+        private void btnDogs_Click(object sender, RoutedEventArgs e)
+        {
+            dogdbEntities objectEntity = new dogdbEntities();
+            dataGridDogs.ItemsSource = objectEntity.dogs.ToList();
+        }
     }
 }
